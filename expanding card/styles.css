@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Mulish', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.panel:nth-of-type(1) {
+    background-image: url(https://images.unsplash.com/photo-1506064549099-34b18723e8c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZXhwbG9yZSUyMHRoZSUyMHdvcmxkfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60);
+}
+.panel:nth-of-type(2) {
+    background-image: url(https://media.istockphoto.com/id/619963520/photo/stream-in-the-forest.webp?b=1&s=170667a&w=0&k=20&c=Jxt0p_2sjOADnEUiKsMp9xWro9XE2VB1JSPJINHzfN8=);
+}
+.panel:nth-of-type(3) {
+    background-image: url(https://media.istockphoto.com/id/1011232056/photo/coconut-palm-trees-on-colorful-sun-set.webp?b=1&s=170667a&w=0&k=20&c=lfmuf5314VT_3ZrQ-beX8VM_zIN6MA3PbvaJynL6oxM=);
+}
+.panel:nth-of-type(4) {
+    background-image: url(https://media.istockphoto.com/id/607743344/photo/snow-in-new-york-city-fantastic-image.webp?b=1&s=170667a&w=0&k=20&c=7B7W9ismrSncdHauykKPMaAY7m_8LzY9k1llYcn39D0=);
+}
+.panel:nth-of-type(5) {
+    background-image: url(https://media.istockphoto.com/id/1164550537/photo/panorama-of-beautiful-mount-ama-dablam-in-himalayas-nepal.webp?b=1&s=170667a&w=0&k=20&c=giKzH9lsttT302CIpYL0DSjU40po9l9B9tQDz5hc9jc=);
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+.panel {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.5s;
+}
+
+@media(max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+    .panel:nth-of-type(4), .panel:nth-of-type(5) {
+        display: none;
+    }
+}
